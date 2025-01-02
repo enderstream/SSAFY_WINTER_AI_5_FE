@@ -71,7 +71,7 @@ function scrollToBottom() {
 // Fetch assistant response from the backend
 async function getAssistantResponse(userMessage) {
   // url = `${BASE_URL}/chat`
-  url = `192.168.31.213:8000/chat`
+  url = `http://192.168.31.213:8000/chat`
   const response = await fetch(url, {
     method: "POST",
     headers: {
