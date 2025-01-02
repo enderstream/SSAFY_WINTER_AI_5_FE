@@ -70,7 +70,8 @@ function scrollToBottom() {
 
 // Fetch assistant response from the backend
 async function getAssistantResponse(userMessage) {
-  url = `${BASE_URL}/chat`
+  // url = `${BASE_URL}/chat`
+  url = `https://ssafy-ai-winter-5-be-v2.fly.dev:8000/chat`
   const response = await fetch(url, {
     method: "POST",
     headers: {
