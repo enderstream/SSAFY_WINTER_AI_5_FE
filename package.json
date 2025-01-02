@@ -18,5 +18,8 @@
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17"
   },
-  "homepage":"https://enderstream.github.io/ssafy_winter_ai_5_fe"
+  "homepage": "https://enderstream.github.io/ssafy_winter_ai_5_fe",
+  "dependencies": {
+    "markdown-it": "^14.1.0"
+  }
 }

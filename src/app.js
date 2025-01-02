@@ -1,12 +1,18 @@
+import MarkdownIt from 'markdown-it'
+
 const chatContainer = document.getElementById("chat-container");
 const messageForm = document.getElementById("message-form");
 const userInput = document.getElementById("user-input");
+
 
 // Create a message bubble
 function createMessageBubble(content, sender = "user") {
   const wrapper = document.createElement("div");
   wrapper.classList.add("mb-6", "flex", "items-start", "space-x-3");
-
+  
+  // Markdown-it 초기화
+  const md = new MarkdownIt();
+  
   // Avatar
   const avatar = document.createElement("div");
   avatar.classList.add(
@@ -47,7 +53,9 @@ function createMessageBubble(content, sender = "user") {
     bubble.classList.add("bg-blue-600", "text-white");
   }
 
-  bubble.textContent = content;
+  // HTML을 DOM에 삽입
+  const html = md.render(content);
+  bubble.innerHTML = html;
 
   wrapper.appendChild(avatar);
   wrapper.appendChild(bubble);
